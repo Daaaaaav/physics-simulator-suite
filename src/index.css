@@ -1,0 +1,233 @@
+:root {
+  --max-width: 1100px;
+  --gap-lg: 2.5rem;
+  --gap-md: 1.5rem;
+  --radius: 16px;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1.5rem;
+  background: #f7f8fa;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-lg);
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  background: #f4f6f8;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.top-bar {
+  background: #0f172a;
+  color: white;
+  padding: 12px 20px;
+}
+
+.main-content {
+  display: flex;
+  flex: 1;
+}
+
+.sidebar {
+  width: 220px;
+  background: #111827;
+  color: white;
+  padding: 16px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+}
+
+.menu-group {
+  margin-bottom: 12px;
+}
+
+.menu-group h4 {
+  margin: 8px 0;
+  color: #9ca3af;
+}
+
+.sidebar a {
+  display: block;
+  color: #e5e7eb;
+  text-decoration: none;
+  padding: 4px 0;
+}
+
+.sidebar a.active {
+  font-weight: bold;
+  color: #60a5fa;
+}
+
+.workspace {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.sim-page h2 {
+  margin-top: 0;
+}
+
+.sim-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "sim controls"
+    "questions controls";
+  gap: 1rem;
+  align-items: start;
+}
+
+.sim-grid > div {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.controls-with-graph {
+  display: grid;
+  grid-template-rows: auto minmax(180px, 1fr);
+  gap: 1rem;
+  height: 100%;
+}
+
+.controls-with-graph > * {
+  background: white;
+  padding: 0.75rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+.controls-panel {
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.controls-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+button.primary {
+  background: #2563eb;
+  color: white;
+}
+
+button.secondary {
+  background: #e5e7eb;
+}
+
+.graph-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.graph-panel {
+  background: #fff;
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,.1);
+}
+
+.question-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.question-item {
+  padding: 8px;
+  border-radius: 8px;
+  background: #f7f9fc;
+}
+
+.mcq-options {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 6px;
+}
+
+.mcq-label {
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.reflection-box {
+  width: 100%;
+  min-height: 70px;
+  margin-top: 6px;
+  padding: 6px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.hint {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.sim-page h2 {
+  margin-bottom: 1rem;
+}
+
+.sim-grid h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: #1f2937;
+}
+
+.sim-grid > div {
+  padding: 1rem;
+}
+
+.output-panel p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+input[type="range"] {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.sim-grid > div {
+  transition: box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+.sim-grid > div:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+}
