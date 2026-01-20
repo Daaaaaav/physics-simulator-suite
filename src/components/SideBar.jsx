@@ -8,14 +8,11 @@ export default function Sidebar() {
       <div className="menu-group">
         <h4>Motion</h4>
         <NavLink to="/motion/freefall">Free Fall</NavLink>
-        <NavLink to="/motion/projectile">Projectile</NavLink>
-        <NavLink to="/motion/circular">Circular Motion</NavLink>
       </div>
 
       <div className="menu-group">
         <h4>Oscillation</h4>
         <NavLink to="/oscillation/pendulum">Pendulum</NavLink>
-        <NavLink to="/oscillation/spring">Spring-Mass</NavLink>
       </div>
 
       <div className="menu-group">
@@ -26,7 +23,6 @@ export default function Sidebar() {
       <div className="menu-group">
         <h4>Energy</h4>
         <NavLink to="/energy/projectile">Energy: Projectile</NavLink>
-        <NavLink to="/energy/pendulum">Energy: Pendulum</NavLink>
       </div>
     </nav>
   );

@@ -169,13 +169,6 @@ export default function FreeFall() {
               impactTime={impactTime}
             />
 
-            <EnergyGraph
-                time={state.t}
-                KE={state.KE}
-                PE={state.PE}
-                E={state.E}
-            />
-
           </div>
 
           {/* --- Questions --- */}
