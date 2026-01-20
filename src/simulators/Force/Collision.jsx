@@ -214,9 +214,26 @@ export default function Collision() {
           style={{ gridArea: "controls" }}
           className="controls-with-graph"
         >
-          <ControlsPanel title="Parameters">
-            {/* sliders here (unchanged logic) */}
-
+         <ControlsPanel title="Parameters">
+              {["v1", "v2", "m1", "m2", "e"].map(key => (
+                <label key={key}>
+                  {key}
+                  <input
+                    type="range"
+                    min={key === "e" ? 0 : -5}
+                    max={key === "e" ? 1 : 5}
+                    step="0.1"
+                    value={state[key]}
+                    onChange={e =>
+                      setState(s => ({
+                        ...s,
+                        [key]: Number(e.target.value)
+                      }))
+                    }
+                  />
+                  <span>{state[key].toFixed(2)}</span>
+                </label>
+                ))}
             <div className="output-panel">
               <p>Time: {state.t.toFixed(2)} s</p>
               <p>v₁: {state.v1.toFixed(2)} m/s</p>
